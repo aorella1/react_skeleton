@@ -4,6 +4,7 @@ const React = require('react');
 class Userform extends React.Component {
 	constructor(props) {
 		super(props);
+		console.log(props);
 		this.state = 
 			{
 				username: '',
@@ -11,7 +12,7 @@ class Userform extends React.Component {
 			};
 		
 		this.handleChange = this.handleChange.bind(this);
-		//this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
 
 	}
 
@@ -20,11 +21,11 @@ class Userform extends React.Component {
 	}
 
 	handleSubmit(event) {
-		event.persist();
 		console.log(event.target.username.value);
 		console.log(event.target.password.value);
 		const username = event.target.username.value;
 		const password = event.target.password.value;
+		this.props.app.changeState("main");
 		event.preventDefault();
 	}
 

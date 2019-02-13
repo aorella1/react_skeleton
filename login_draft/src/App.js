@@ -1,40 +1,30 @@
 import React, { Component } from 'react';
 import Userform from "./Userform.jsx";
+import Main from "./Main.jsx";
 
 class App extends Component {
   constructor(props){
 	super(props);
 	this.availableStates = ["login","main"];
 	this.state = {
-		login: true,
-		main: false
+		selected: 'login'
 	}
 	this.components = {
-		login: <Userform app={this}/>
+		login: <Userform app={this}/>,
+		main: <Main app={this}/>
 	}
-
-	this.resetState = {
-		login: false,
-		main: false
-	}
-	this.currentState = this.components["login"];
 	this.changeState = this.changeState.bind(this);
   }
 
   changeState(state){
-	this.setState = this.resetState;
-	this.setState({[state]:true});
-	this.currentState = this.components[state];
+	if(this.availableStates.includes(state)){
+		this.setState({selected:state});
+	}
   }
 
 
   render() {
-	let state;
-	for(let i = 0; i < this.availableStates.length; i++){
-		if(this.state[this.availableStates[i]] === true){
-			state = this.components[this.availableStates[i]];
-		}
-	}
+	let state = this.components[this.state.selected];
 	console.log(state);
     /*return (
       <div className="App">
