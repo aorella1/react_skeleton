@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 const React = require('react');
 
@@ -51,8 +52,12 @@ class Userform extends React.Component {
 					<p>Password</p>
 					<input type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
 					<br/>
-					<button type="submit" value="submit">Submit</button>
+					<Button type="submit" value="submit" variant="contained" color="primary">Submit</Button>
 				</form>
+				<br/>
+				<Button variant="contained" color="primary">
+      				Hello World
+    			</Button>
 				<br/>
 				<Link to='/sign_up'>Sign up</Link>
 			</div>
