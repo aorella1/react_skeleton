@@ -82,9 +82,11 @@ class Userform extends React.Component {
 					<Input type="password" name="password" value={this.state.password} onChange={this.handleChange}/>
 					<br/>
           <br/>
+          <Grid container direction= "column" justify="center" alignItems="center"> 
 					<Button type="submit" value="submit" variant="contained" color="primary">Submit</Button>
+          </Grid>
 				</form>
-
+        
 				<Link to='/sign_up'>Sign up</Link>
 				<br/>
       </Grid>
