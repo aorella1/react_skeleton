@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import Userform from './pages/Userform';
 import Main from './pages/Main';
+import Signup from './pages/Signup';
 
 class App extends Component {
 	render() {
@@ -12,6 +13,7 @@ class App extends Component {
 				<Switch>
 					<Route exact path='/' component={Userform}/>
 					<Route path='/home' component={Main}/>
+					<Route path='/sign_up' component={Signup}/>
 				</Switch>
 			</div>
 		)

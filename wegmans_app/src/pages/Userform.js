@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
 const React = require('react');
-var http = require('http');
 
 class Userform extends React.Component {
 	constructor(props) {
@@ -54,6 +53,8 @@ class Userform extends React.Component {
 					<br/>
 					<button type="submit" value="submit">Submit</button>
 				</form>
+				<br/>
+				<Link to='/sign_up'>Sign up</Link>
 			</div>
 		);
 	}
