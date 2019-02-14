@@ -14,9 +14,6 @@ import Typography from '@material-ui/core/Typography';
 
 const React = require('react');
 
-
-
-
 const card = {
   width: 300,
     minWidth: 275,
@@ -73,8 +70,10 @@ class Userform extends React.Component {
 			<Card style={card}>
         <CardContent>
         <Grid container direction= "column" justify="center" alignItems="center" >
-        <Typography variant="h3"> W Utils </Typography>
+        <Typography variant="h3"> W App </Typography>
+        <img src= "https://www.logolynx.com/images/logolynx/8f/8f0a16721f32e2ea2a2caf8d231013b5.png" height="100" width="100"/>
 				<form  onSubmit = {this.handleSubmit}>
+             
 					<p>Username: </p>
 					<Input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
 					<br/>
